@@ -1,5 +1,13 @@
-function Home() {
-  return <div className="bg-amber-300">Home</div>;
-}
+import Acardion from '../Components/Home/Acardion';
+import HomeCardsArchi from '../components/Home/HomeCardsArchi';
+import MapComponent from '../components/MapComponent';
 
-export default Home;
+export default function Home() {
+  return (
+    <main>
+      <Acardion />
+      <HomeCardsArchi />
+      <MapComponent />
+    </main>
+  );
+}

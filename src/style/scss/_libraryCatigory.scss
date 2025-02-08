@@ -1,0 +1,169 @@
+.library_pattern1 {
+  top: 290px;
+  left: -300px;
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  filter: grayscale(80%);
+  opacity: 0.5;
+  animation: circleAnimation 15s infinite linear;
+}
+@keyframes circleAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+// unicode-bidi: isolate;
+.container-hero {
+  min-height: max-content;
+}
+.libraryCont {
+  z-index: 1;
+  position: relative;
+
+  .moreLib {
+    position: absolute;
+    background-color: #141515;
+    color: white;
+    display: flex;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    align-items: center;
+    right: 20px;
+  }
+  .moreLib:hover {
+    color: #141515 !important;
+    background-color: white;
+  }
+  .backGroundLib {
+    // background-image: url("https://img.freepik.com/premium-photo/room-with-bo…it_874813-1567.jpg?ga=GA1.1.476875968.1711439239&");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.578),
+        rgba(17, 1, 1, 0.83)
+      ),
+      url("	https://i.pinimg.com/564x/c9/86/f2/c986f2e060adf94b05f120e87c518eba.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // backdrop-filter:blur(5px);
+
+    background-position: top;
+    background-attachment: fixed;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    width: 100% !important;
+  }
+
+  // padding-top: 1%;
+  h1 {
+    position: absolute;
+    left: -100px;
+    text-transform: capitalize !important;
+    color: white !important;
+    font-family: "FoglihtenNo06";
+    font-size: 35px;
+    @media screen and (max-width: 750px) {
+      font-size: 25px;
+      left: -140px;
+    }
+    @media screen and (max-width: 580px) {
+      font-size: 20px;
+      left: -170px;
+    }
+    @media screen and (max-width: 450px) {
+      font-size: 20px;
+      left: -200px;
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 18px;
+      left: -200px;
+    }
+  }
+  .loders-h1 {
+    // font-size: 150px;
+    background-image: linear-gradient(135deg, #fff 50%, transparent 50%);
+    background-size: 200% 100%;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.01em;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    // font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    animation: fill 2s linear;
+  }
+  .libCardCont {
+    display: grid;
+    height: min-content;
+
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    // background-color:rgba(17, 1, 1, 0.934) ;
+    @media screen and (max-width: 1270px) {
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+    @media screen and (max-width: 960px) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .libraryCard {
+      // width: 300px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 3px;
+      background-color: red;
+      text-align: center;
+      padding: 20px 30px;
+      background: linear-gradient(#5b6166, #141515);
+      color: #fff;
+      // animation: mymove 5s infinite;
+      transition: 3s;
+      // color: var(--text-color);
+      .iconLib {
+        display: flex;
+        justify-content: center;
+      }
+      h3 {
+        // color: var(--text-color);
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      p {
+        // color: var(--text-color);
+        color: #fff;
+        line-height: 23px;
+      }
+    }
+    .libraryCard:hover {
+      background: linear-gradient(#141515, #141515) !important;
+    }
+  }
+}
+
+@keyframes mymove {
+  0% {
+    background: linear-gradient(#5b6166, #141515);
+  }
+  100% {
+    background: linear-gradient(#141515, #5b6166);
+  }
+}
+
+@keyframes fill {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 -100%;
+  }
+}

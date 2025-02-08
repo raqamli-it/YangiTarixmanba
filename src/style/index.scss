@@ -1,0 +1,60 @@
+
+@import "./genral.scss";
+@import "./scss/theme";
+@import "./scss/layout";
+@import "./scss/weather";
+@import "./scss/header";
+@import "./scss/login";
+@import "./scss/news";
+@import "./scss/libraryCatigory";
+@import "./scss/bigCardFilter";
+@import "./scss/filter";
+@import "./scss/_namuna.css";
+
+@import "./home/acardion";
+// @import "./home/mapsHome";
+@import "./home/homeCardsArchi";
+
+@layer utilities {
+  .bg-custom {
+    background-image: url("https://www.gazeta.uz/media/img/2021/05/YCZaUC16224677848977_b.jpg"),
+      linear-gradient(
+        49deg,
+        rgba(2, 0, 36, 0.847) 0%,
+        rgba(18, 18, 35, 0.926) 63%,
+        rgb(11, 15, 17) 100%
+      );
+    background-blend-mode: overlay; /* yoki boshqa blending rejimni qo'shing */
+  }
+}
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox uchun */
+  scrollbar-color: #88888824 #00000024; /* Firefox uchun */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 7px !important; /* Chrome, Safari va Edge uchun */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #c814142d;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888888bd;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555555a4;
+}
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+

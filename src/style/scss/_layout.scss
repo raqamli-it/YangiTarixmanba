@@ -1,0 +1,24 @@
+.loyaut-loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+
+  svg {
+    width: 800px !important;
+    // background-color: red;
+    padding: 0;
+    height: 400px;
+    @media screen and (max-width: 768px) {
+      width: 250px !important;
+      height: 270px !important;
+    }
+  }
+}

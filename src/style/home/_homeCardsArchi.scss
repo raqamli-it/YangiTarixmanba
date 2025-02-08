@@ -1,0 +1,326 @@
+// :root {
+//   --background: white;
+//   --text-color: #000000;
+//   --border-color: #eee;
+//   --card-back-color: white;
+//   --border-color2: #000;
+// }
+
+.card__container {
+  position: relative;
+  max-width: 1450px;
+  margin: auto;
+  // padding: 2rem;
+  // background-color: var(--background);
+  background: rgba(0, 0, 0, 0.633);
+  // background-color: red;
+
+  .video-make {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.home__card__container {
+  // width: 100% !important;
+  position: relative;
+  max-width: 1350px;
+  margin: auto;
+  padding: 2rem;
+  // background-color: var(--background);
+  background: transparent;
+}
+
+.home__cards__title {
+  z-index: 10;
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 2.8rem;
+    background-color: transparent;
+    color: #fff;
+    z-index: 9;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+    }
+  }
+  .button {
+    width: 150px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 900;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 100;
+    @media screen and (max-width: 768px) {
+      width: 120px;
+      font-size: 15px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100px;
+      font-size: 10px;
+    }
+  }
+  .button:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+  }
+}
+
+.home__wrapper:hover .home__cards__title button {
+  -webkit-animation: shake-horizontal 0.8s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: shake-horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  // animation-iteration-count: infinite;
+}
+@-webkit-keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+.home__card {
+  text-align: center;
+  width: 300px;
+  height: 380px;
+  background: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 1rem;
+  position: relative;
+  transition: 0.5s all ease-in-out;
+  border-radius: 8px;
+}
+.home__card:hover {
+  transform: translateY(-10px);
+}
+.home__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 36, 63, 0.3),
+    rgba(13, 36, 63, 1)
+  );
+  z-index: 2;
+  opacity: 0;
+  border-radius: 8px;
+  transition: 0.5s all;
+}
+.home__card:hover::before {
+  opacity: 1;
+}
+
+.home__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  border: 2px solid rgba(0, 0, 0, 0.19);
+}
+.home__card img:hover {
+  border-radius: 8px;
+}
+.home__card .home__info {
+  text-align: center;
+  position: relative;
+  color: #fff;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+.home__card:hover .home__info {
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home__card .home__info h1 {
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+.home__card .home__info p {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.home__card .home__info .home__btn {
+  background: #fff;
+  padding: 0.5rem 1rem;
+  color: #000;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+.home__card .home__info .home__btn:hover {
+  background: #fc5185;
+  color: #fff;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.right_pattern {
+  top: -120px;
+  right: 50px;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  filter: grayscale(50%);
+  opacity: 0.5;
+  animation: circleAnimation 25s infinite linear;
+  // z-index: -1;
+}
+.Left_pattern {
+  top: -120px;
+  left: -240px;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  filter: grayscale(50%);
+  opacity: 0.5;
+  animation: circleAnimation 25s infinite linear;
+}
+@keyframes circleAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+// .swiper-button-prev {
+//   color: white;
+// }
+
+// /* O'ng tugma: kartalar konteyneridan tashqariga surish */
+// .swiper-button-next {
+//   color: white;
+// }
+
+// /* Tugmalarni kichik ekranlarda to'g'rilash */
+// @media (max-width: 768px) {
+//   .swiper-button-prev,
+//   .swiper-button-next {
+//     left: -40px;
+//     right: -40px;
+//     width: 30px;
+//     height: 30px;
+//   }
+// }
+
+// .swiper-button-prev,
+// .swiper-button-next {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   z-index: 10;
+//   background-color: rgba(0, 0, 0, 0.5); /* Yarı shaffof fon */
+//   color: white;
+//   border-radius: 50%;
+//   width: 40px;
+//   height: 40px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+// }
+
+// /* Juda kichik ekranlarda (telefon) */
+// @media (max-width: 480px) {
+//   .swiper-button-prev,
+//   .swiper-button-next {
+//     left: -15px;
+//     right: -15px;
+//     width: 25px;
+//     height: 25px;
+//   }
+// }

@@ -1,0 +1,212 @@
+// body {
+//   background-image: url("https://img.freepik.com/premium-vector/dark-background-with-cloth-texture_448617-61.jpg?w=1060") !important;
+//   transition: 0.5s;
+//   background-size: cover;
+// }
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.752)),
+    url("../../../public/yengiFon7.jpg");
+  transition: 0.5s;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+body.bg1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.179)),
+    url("../../../public/yengiFon1.jpg") !important;
+  transition: 0.5s;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body.bg2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.179)),
+    url("../../../public/yengiFon2.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  transition: 0.5s;
+  background-repeat: no-repeat !important;
+}
+//
+body.bg3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.179)),
+    url("../../../public/yengiFon3.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  transition: 0.5s;
+  background-repeat: no-repeat !important;
+}
+// https://yuz.uz/imageproxy/1200x/https://yuz.uz/file/news/a2f34dfb0dfad1007146b2212d108890.jpg
+body.bg4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.179)),
+    url("../../../public/yengiFon4.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  transition: 0.5s;
+  background-repeat: no-repeat !important;
+}
+body.bg5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.179)),
+    url("../../../public/yengiFon5.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  transition: 0.5s;
+  background-repeat: no-repeat !important;
+}
+body.bg6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.179)),
+    url("../../../public/yengiFon6.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  transition: 0.5s;
+  background-repeat: no-repeat !important;
+}
+body {
+  background-repeat: no-repeat !important;
+}
+
+// body {
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   // background: url(images/bg.jpg) no-repeat center top;
+//   position: fixed;
+//   z-index: -1;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+
+.color__switcher {
+  width: 10rem;
+  padding: 1rem;
+  background: #fff;
+  position: fixed !important;
+  right: 0;
+  top: 50%;
+  transform: translate(100%, -50%);
+  transition: all 0.5s ease-in-out;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1000;
+
+  .color_switcher_button {
+    width: 3rem;
+    height: 3rem;
+    background: #026ec6;
+    border: none;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    display: grid;
+    place-items: center;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+
+    i {
+      animation: settingsButton 2s infinite;
+      color: #fff;
+    }
+  }
+  .color__switcher__title {
+    font-size: 1.2rem;
+  }
+  .color__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // gap: 5px;
+  }
+}
+@keyframes settingsButton {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.color__switcher--open {
+  transform: translate(0, -50%);
+}
+.color__item {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  margin: 0.625rem 0.4375rem 0.4375rem;
+  border-radius: 6px;
+}
+
+.bgThreecolor {
+  background-image: repeating-radial-gradient(
+      circle at center center,
+      transparent 0px,
+      transparent 8px,
+      rgba(255, 255, 255, 0.05) 8px,
+      rgba(255, 255, 255, 0.05) 11px,
+      transparent 11px,
+      transparent 17px,
+      rgba(255, 255, 255, 0.05) 17px,
+      rgba(255, 255, 255, 0.05) 25px,
+      transparent 25px,
+      transparent 38px,
+      rgba(255, 255, 255, 0.05) 38px,
+      rgba(255, 255, 255, 0.05) 42px
+    ),
+    repeating-radial-gradient(
+      circle at center center,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 11px,
+      rgb(0, 0, 0) 11px,
+      rgb(0, 0, 0) 19px,
+      rgb(0, 0, 0) 19px,
+      rgb(0, 0, 0) 24px,
+      rgb(0, 0, 0) 24px,
+      rgb(0, 0, 0) 33px,
+      rgb(0, 0, 0) 33px,
+      rgb(0, 0, 0) 44px,
+      rgb(0, 0, 0) 44px,
+      rgb(0, 0, 0) 46px
+    );
+  background-size: 60px 60px;
+}
+
+.bg1_ {
+  // url("0");
+  background-image: url("../../../public/yengiFon1.jpg") !important;
+  background-size: contain;
+}
+.bg2_ {
+  background-image: url("../../../public/yengiFon2.jpg") !important;
+  background-size: contain;
+}
+.bg3_ {
+  background-image: url("../../../public/yengiFon3.jpg");
+  background-size: contain;
+}
+.bg4_ {
+  background-image: url("../../../public/yengiFon4.jpg");
+  background-size: contain;
+}
+.bg5_ {
+  background-image: url("../../../public/yengiFon5.jpg");
+  background-size: contain;
+}
+.bg6_ {
+  background-image: url("../../../public/yengiFon6.jpg");
+  background-size: contain;
+}
+.home_card_title_h1 {
+  color: #000;
+}
